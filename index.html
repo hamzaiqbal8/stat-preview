@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="popup-trigger__container">
+      <button class="button button--show-modal">Show Modal</button>
+    </div>
+    <div class="popup-modal">
+      <div class="popup-modal__wrapper">
+        <div class="popup-modal__overlay"></div>
+        <div class="stats-preview-container">
+            <div class="stats-preview-container-wrapper">
+              <div class="left-preview-slide">
+                <div class="preview-heading">
+                  <h2>Get <span> insights </span> that help your business grow.</h2>
+                </div>
+                <div class="preview-description">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Voluptatum, officia. Quam mollitia tenetur asperiores hic!
+                    Repellat, ipsum architecto?
+                  </p>
+                </div>
+                <div class="stat-preview-info">
+                  <div class="stat-preview-info-wrapper">
+                    <div class="info stat-info-compaines">
+                      <h4>10k+</h4>
+                      <span>Companies</span>
+                    </div>
+                    <div class="info stat-intfo-templates">
+                      <h4>314</h4>
+                      <span> Templates </span>
+                    </div>
+                    <div class="info stat-info-queries">
+                      <h4>12M+</h4>
+                      <span>QUeries</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right-side-slide">
+                <div class="stats-preview-image">
+                  <img src="./images/image-header-desktop.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <script>
+      let popupModalEl = document.querySelector(".popup-modal");
+      let popupOverlayEl = document.querySelector(".popup-modal__overlay");
+      let popupTriggerBtn = document.querySelector(".button--show-modal");
+      function showPopup() {
+        popupModalEl.classList.add("show");
+      }
+      function hidePopup() {
+        popupModalEl.classList.remove("show");
+      }
+      popupTriggerBtn.addEventListener("click", () => {
+        showPopup();
+      });
+      popupOverlayEl.addEventListener("click", () => {
+        hidePopup();
+      });
+      setTimeout(() => {
+        showPopup();
+      }, 3000);
+    </script>
+  </body>
+</html>
